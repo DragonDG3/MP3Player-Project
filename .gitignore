@@ -1,0 +1,16 @@
+# PlatformIO build files
+.pio/
+
+# Temporary caches
+.cache/
+
+# clangd index and cache
+clangd/
+
+# Generated compilation database
+compile_commands.json
+
+# Neovim swap and backup files
+*.swp
+*.swo
+*~
