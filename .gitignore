@@ -4,6 +4,10 @@
 # Temporary caches
 .cache/
 
+# .NET build output
+**/bin/
+**/obj/
+
 # clangd index and cache
 clangd/
 

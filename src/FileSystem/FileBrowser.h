@@ -3,16 +3,19 @@
 #include <Arduino.h>
 #include <FS.h>
 #include <SD.h>
-#include <string>
-#include <vector>
 
 #include "Screens.h"
 
 class FileBrowser
 {
   private:
-    std::vector<String> folders;
-    std::vector<String> files;
+    String folders[50];
+    String files[100];
+    String displayItems[151];
+
+    int folderCount = 0;
+    int fileCount = 0;
+    int displayItemsCount = 0;
 
     String currentPath;
     int cursor = 0;
@@ -20,8 +23,8 @@ class FileBrowser
 
     void Refresh()
     {
-        folders.clear();
-        files.clear();
+        folderCount = 0;
+        fileCount = 0;
 
         File dir = SD.open(currentPath);
 
@@ -49,32 +52,37 @@ class FileBrowser
 
             if (entry.isDirectory()) // Adds all the folders from the sd card to the folders list
             {
-                if (!name.startsWith("&") && name != "System Volume Information") // does not add system files
-                    folders.push_back(path);
+                if (!name.startsWith("&") && name != "System Volume Information" &&
+                    folderCount < 50) // does not add system files
+                    folders[folderCount++] = path;
             }
-            else if (name.endsWith(".mp3") || name.endsWith(".MP3")) // Adds all the files to files list
-                files.push_back(path);
+            else if ((name.endsWith(".mp3") || name.endsWith(".MP3")) &&
+                     fileCount < 100) // Adds all the files to files list
+                files[fileCount++] = path;
 
             entry.close();
-            entry.openNextFile();
+            entry = dir.openNextFile();
         }
         entry.close();
+
+        Serial.printf("Folders found: %d\n", folderCount);
+        Serial.printf("MP3 files found: %d\n", fileCount);
     }
 
-    std::vector<String> NormalGetDI()
+    void NormalGetDI()
     {
-        std::vector<String> displayItems;
+        Refresh();
 
-        for (const String &path : folders)
-            displayItems.push_back(GetFileName(path));
+        displayItemsCount = 0;
 
-        for (const String &path : files)
-            displayItems.push_back(GetFileName(path));
+        if (currentPath != "/" && displayItemsCount < 151)
+            displayItems[displayItemsCount++] = "..";
 
-        if (currentPath != "/")
-            displayItems.insert(displayItems.begin(), "..");
+        for (int i = 0; i < folderCount && displayItemsCount < 151; i++)
+            displayItems[displayItemsCount++] = GetFileName(folders[i]);
 
-        return displayItems;
+        for (int i = 0; i < fileCount && displayItemsCount < 151; i++)
+            displayItems[displayItemsCount++] = GetFileName(files[i]);
     }
 
     String GetFileName(const String &path)
@@ -93,17 +101,32 @@ class FileBrowser
         this->screen = screen;
     }
 
-    std::vector<String> GetDisplayItems()
+    String *GetDisplayItems()
     {
         switch (screen)
         {
         case Screens::Normal:
-            return NormalGetDI();
+            NormalGetDI();
+            break;
 
         default:
-            return {};
+            displayItemsCount = 0;
+            break;
         }
+
+        return displayItems;
+    }
+
+    int GetDisplayItemsCount() { return displayItemsCount; }
+
+    void MoveUp()
+    {
+        cursor--;
+        if (cursor < 0)
+            cursor = GetDisplayItemsCount() - 1;
     }
 
     Screens Screen() { return screen; }
+
+    int Cursor() { return cursor; }
 };

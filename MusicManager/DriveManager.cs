@@ -15,7 +15,7 @@ public class DriveManager
             : drives[0];
         if (drive == null) { Console.WriteLine("No available drives."); return; }
 
-        PATH = Path.Combine(drive.RootDirectory.FullName);
+        PATH = Path.Combine(drive.RootDirectory.FullName, "Music");
 
         Console.WriteLine($"Drive selected: {drive.Name}");
         Console.WriteLine($"Music path: {PATH}");
