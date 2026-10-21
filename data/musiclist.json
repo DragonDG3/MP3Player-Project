@@ -1,0 +1,414 @@
+{
+  "0": {
+    "id": "01",
+    "name": "Azra",
+    "Songs": {
+      "0": {
+        "id": "001",
+        "name": "041.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "1": {
+        "id": "002",
+        "name": "32 956.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "2": {
+        "id": "003",
+        "name": "A Sta Da Radim.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "3": {
+        "id": "004",
+        "name": "Ako Znas Bilo Sto.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "4": {
+        "id": "005",
+        "name": "Azra - Filigranski Plo\u010Dnici (Full Album).mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "5": {
+        "id": "006",
+        "name": "Balkan.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "6": {
+        "id": "007",
+        "name": "Bankrot Mama.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "7": {
+        "id": "008",
+        "name": "Cudne Navike.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "8": {
+        "id": "009",
+        "name": "Daleko Od Istine.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "9": {
+        "id": "010",
+        "name": "Dzoni, Budi Dobar.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "10": {
+        "id": "011",
+        "name": "Fa Fa Fa.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "11": {
+        "id": "012",
+        "name": "FILIGRANSKA AZRA \u040FONIJEV PRIMERAK, DRUGI DEO.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "12": {
+        "id": "013",
+        "name": "FILIGRANSKA AZRA \u040FONIJEV PRIMERAK, PRVI DEO.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "13": {
+        "id": "014",
+        "name": "Filigranski Plocnici.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "14": {
+        "id": "015",
+        "name": "Gorki Okus.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "15": {
+        "id": "016",
+        "name": "Gospodar Samoce.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "16": {
+        "id": "017",
+        "name": "Gracija.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "17": {
+        "id": "018",
+        "name": "Grad Bez Ljubavi.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "18": {
+        "id": "019",
+        "name": "Hladan Kao Led.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "19": {
+        "id": "020",
+        "name": "Hladni Prsti.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "20": {
+        "id": "021",
+        "name": "Iran.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "21": {
+        "id": "022",
+        "name": "Izmedju Nas.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "22": {
+        "id": "023",
+        "name": "Jablan.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "23": {
+        "id": "024",
+        "name": "Kad Miki Kaze Da Se Boji.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "24": {
+        "id": "025",
+        "name": "Kao Ti I Ja.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "25": {
+        "id": "026",
+        "name": "Karta Za Srecu.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "26": {
+        "id": "027",
+        "name": "Kipo.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "27": {
+        "id": "028",
+        "name": "Krvava Meri.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "28": {
+        "id": "029",
+        "name": "Kurvini Sinovi.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "29": {
+        "id": "030",
+        "name": "Lijepe Zene Prolaze Kroz Grad.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "30": {
+        "id": "031",
+        "name": "Ljudi Samoce.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "31": {
+        "id": "032",
+        "name": "Naizgled Lijepa.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "32": {
+        "id": "033",
+        "name": "Ne Mogu Pomoci Nikome Od Nas.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "33": {
+        "id": "034",
+        "name": "Ne Prodajem Nasmijesenog Psa.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "34": {
+        "id": "035",
+        "name": "Ne Reci Mi Dvaput.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "35": {
+        "id": "036",
+        "name": "Nedelja Popodne.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "36": {
+        "id": "037",
+        "name": "Nemoj Po Glavi Druze Plavi.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "37": {
+        "id": "038",
+        "name": "Nije OK.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "38": {
+        "id": "039",
+        "name": "Nikom Nije Lepse Neg Je Nam.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "39": {
+        "id": "040",
+        "name": "Obrati Paznju Na Poslednju Stvar.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "40": {
+        "id": "041",
+        "name": "Odlazak U Noc.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "41": {
+        "id": "042",
+        "name": "Ostavi Me Nasamo.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "42": {
+        "id": "043",
+        "name": "Pametni I Knjiski Ljudi.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "43": {
+        "id": "044",
+        "name": "Pavel.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "44": {
+        "id": "045",
+        "name": "Poziv Na Ples.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "45": {
+        "id": "046",
+        "name": "Proljece Je 13. U Decembru.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "46": {
+        "id": "047",
+        "name": "Provedimo Vikend Zajedno.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "47": {
+        "id": "048",
+        "name": "Put Za Katmandu.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "48": {
+        "id": "049",
+        "name": "Ravno Do Dna.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "49": {
+        "id": "050",
+        "name": "Reket Rol Iz Sume Striborove.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "50": {
+        "id": "051",
+        "name": "Roll Over Jura.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "51": {
+        "id": "052",
+        "name": "Slucajan Susret.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "52": {
+        "id": "053",
+        "name": "StaDaRadim.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "53": {
+        "id": "054",
+        "name": "Strah Od Smrti.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "54": {
+        "id": "055",
+        "name": "Strankinja Sa Plavi Eyes.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "55": {
+        "id": "056",
+        "name": "Suncana Strana Ulice.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "56": {
+        "id": "057",
+        "name": "Suzi F. (Kada Vidm Bec).mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "57": {
+        "id": "058",
+        "name": "Tanka Crna Linija.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "58": {
+        "id": "059",
+        "name": "Tesko Vrijeme.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "59": {
+        "id": "060",
+        "name": "Tko To Tamo Pjeva.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "60": {
+        "id": "061",
+        "name": "Uvjek Ista Prica.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "61": {
+        "id": "062",
+        "name": "Uzas Je Moja Furka.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "62": {
+        "id": "063",
+        "name": "Visoko Iznad Vlakova.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "63": {
+        "id": "064",
+        "name": "Volim Te Kad Pricas.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "64": {
+        "id": "065",
+        "name": "Vrijeme Odluke.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "65": {
+        "id": "066",
+        "name": "Zivot Obicnog Tempa.mp3",
+        "path": "D:\\Music\\Azra"
+      },
+      "66": {
+        "id": "067",
+        "name": "\u006068.mp3",
+        "path": "D:\\Music\\Azra"
+      }
+    }
+  },
+  "1": {
+    "id": "02",
+    "name": "Block Out",
+    "Songs": {
+      "0": {
+        "id": "001",
+        "name": "Block Out - 8 i 30.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "1": {
+        "id": "002",
+        "name": "Block Out - Deponija.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "2": {
+        "id": "003",
+        "name": "Block Out - Eutanazija (Macropodas).mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "3": {
+        "id": "004",
+        "name": "Block Out - Ja Ne Zelim Da Odes (Devojko Mala).mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "4": {
+        "id": "005",
+        "name": "Block Out - Ja Znam.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "5": {
+        "id": "006",
+        "name": "Block Out - Kisa.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "6": {
+        "id": "007",
+        "name": "Block Out - Leto Na Adi.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "7": {
+        "id": "008",
+        "name": "Block Out - Ljubicasto I.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "8": {
+        "id": "009",
+        "name": "Block Out - Ljubicasto II.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "9": {
+        "id": "010",
+        "name": "Block Out - Neki Moji Drugovi.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "10": {
+        "id": "011",
+        "name": "Block Out - Rodjendanska Pesma.mp3",
+        "path": "D:\\Music\\Block Out"
+      },
+      "11": {
+        "id": "012",
+        "name": "Block Out - Sanjaj Me.mp3",
+        "path": "D:\\Music\\Block Out"
+      }
+    }
+  },
+  "2": {
+    "id": "03",
+    "name": "Ekatarina Velika",
+    "Songs": {}
+  }
+}
