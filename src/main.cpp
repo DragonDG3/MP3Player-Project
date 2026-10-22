@@ -1,6 +1,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Arduino.h>
+#include <ArduinoJson.h>
 #include <SD.h>
 #include <SPI.h>
 #include <Wire.h>
@@ -9,6 +10,7 @@
 #include "Display/OLED.h"
 #include "FileSystem/FileBrowser.h"
 #include "FileSystem/Screens.h"
+#include "HardwareSerial.h"
 #include "Input/GPIOInput.h"
 #include "Input/InputAction.h"
 
@@ -24,7 +26,6 @@ void setup()
     Serial.begin(115200);
 
     input.Begin();
-
     SPI.begin();
 
     Wire.begin(OLED_SDA, OLED_SCL);
@@ -46,7 +47,6 @@ void setup()
 
 void loop()
 {
-
     switch (browser.Screen())
     {
     case Screens::Normal:
@@ -69,7 +69,7 @@ void ScreenSetup()
     {
         int index = start + row;
 
-        if (index > displayItemsCount)
+        if (index >= displayItemsCount)
             break;
 
         oled.setCursor(0, row * 8);
@@ -78,7 +78,7 @@ void ScreenSetup()
 
         oled.setTextColor(selected ? SSD1306_BLACK : SSD1306_WHITE, selected ? SSD1306_WHITE : SSD1306_BLACK);
 
-        oled.println(displayItems[row]);
+        oled.println(displayItems[index]);
     }
 
     oled.refresh();

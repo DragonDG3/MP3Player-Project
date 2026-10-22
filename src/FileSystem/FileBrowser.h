@@ -1,7 +1,9 @@
 #pragma once
 
 #include <Arduino.h>
+#include <ArduinoJson.h>
 #include <FS.h>
+#include <LittleFS.h>
 #include <SD.h>
 
 #include "Screens.h"
@@ -23,47 +25,58 @@ class FileBrowser
 
     void Refresh()
     {
-        folderCount = 0;
-        fileCount = 0;
-
-        File dir = SD.open(currentPath);
-
-        if (!dir || !dir.isDirectory())
+        if (!LittleFS.begin(false))
         {
-            dir.close();
+            Serial.println("LittleFS mount failed!");
             return;
         }
 
-        File entry = dir.openNextFile();
+        folderCount = 0;
+        fileCount = 0;
 
-        while (entry)
+        File file = LittleFS.open("/musiclist.json", FILE_READ);
+
+        if (!file)
         {
-            String path = entry.name();
-
-            if (!path.startsWith("/")) // makes sure that the path is spelled correctly
-            {
-                path = currentPath;
-                if (!path.endsWith("/"))
-                    path += "/";
-                path += entry.name(); // }
-            }
-
-            String name = GetFileName(path);
-
-            if (entry.isDirectory()) // Adds all the folders from the sd card to the folders list
-            {
-                if (!name.startsWith("&") && name != "System Volume Information" &&
-                    folderCount < 50) // does not add system files
-                    folders[folderCount++] = path;
-            }
-            else if ((name.endsWith(".mp3") || name.endsWith(".MP3")) &&
-                     fileCount < 100) // Adds all the files to files list
-                files[fileCount++] = path;
-
-            entry.close();
-            entry = dir.openNextFile();
+            Serial.println("Coudldnt open musiclist.json");
+            return;
         }
-        entry.close();
+
+        JsonDocument doc;
+
+        DeserializationError error = deserializeJson(doc, file);
+        file.close();
+
+        if (error)
+        {
+            Serial.print("JSON error: ");
+            Serial.println(error.c_str());
+            return;
+        }
+
+        JsonObject root = doc.as<JsonObject>();
+
+        for (JsonPair artistPair : root)
+        {
+            if (folderCount >= 50)
+                break;
+
+            JsonObject artist = artistPair.value().as<JsonObject>();
+
+            folders[folderCount++] = artist["name"] | "Unknown";
+
+            JsonObject songs = artist["Songs"].as<JsonObject>();
+
+            for (JsonPair songPair : songs)
+            {
+                if (fileCount >= 100)
+                    break;
+
+                JsonObject song = songPair.value().as<JsonObject>();
+
+                files[fileCount++] = song["name"] | "Unknown";
+            }
+        }
 
         Serial.printf("Folders found: %d\n", folderCount);
         Serial.printf("MP3 files found: %d\n", fileCount);
